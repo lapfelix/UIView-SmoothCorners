@@ -36,8 +36,12 @@
 
     if (self.flx_continuousCorners
         && [self.layer.mask isKindOfClass:CAShapeLayer.class]) {
-        ((CAShapeLayer *)self.layer.mask).path = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                                            cornerRadius:self.layer.cornerRadius].CGPath;
+        CAShapeLayer *mask = ((CAShapeLayer *)self.layer.mask);
+
+        if (!CGRectEqualToRect(mask.bounds, self.bounds)) {
+            mask.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                                                   cornerRadius:self.layer.cornerRadius].CGPath;
+        }
     }
 }
 
