@@ -17,16 +17,16 @@
         SEL defaultSelector = @selector(layoutSubviews);
         SEL swizzledSelector = @selector(flx_layoutSubviews);
 
-        Method defaultMethod = class_getInstanceMethod(self.class, defaultSelector);
-        Method swizzledMethod = class_getInstanceMethod(self.class, swizzledSelector);
+        Method defaultMethod = class_getInstanceMethod(UIView.class, defaultSelector);
+        Method swizzledMethod = class_getInstanceMethod(UIView.class, swizzledSelector);
 
-        BOOL methodExists = !class_addMethod(self.class, defaultSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        BOOL methodExists = !class_addMethod(UIView.class, defaultSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
 
         if (methodExists) {
             method_exchangeImplementations(defaultMethod, swizzledMethod);
         }
         else {
-            class_replaceMethod(self.class, swizzledSelector, method_getImplementation(defaultMethod), method_getTypeEncoding(defaultMethod));
+            class_replaceMethod(UIView.class, swizzledSelector, method_getImplementation(defaultMethod), method_getTypeEncoding(defaultMethod));
         }
     });
 }
