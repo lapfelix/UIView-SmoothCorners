@@ -13,6 +13,7 @@
 		DC3F4661223F1B2500877556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3F4660223F1B2500877556 /* Assets.xcassets */; };
 		DC3F4664223F1B2500877556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC3F4662223F1B2500877556 /* LaunchScreen.storyboard */; };
 		DC3F466E223F1B5F00877556 /* UIView+SmoothCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3F466C223F1B5F00877556 /* UIView+SmoothCorners.m */; };
+		DCC5B13422499C05002E3D5F /* SmoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC5B13322499C05002E3D5F /* SmoothView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DC3F466B223F1B5E00877556 /* SmoothCorners-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmoothCorners-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC3F466C223F1B5F00877556 /* UIView+SmoothCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SmoothCorners.m"; path = "../../UIView+SmoothCorners.m"; sourceTree = "<group>"; };
 		DC3F466D223F1B5F00877556 /* UIView+SmoothCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+SmoothCorners.h"; path = "../../UIView+SmoothCorners.h"; sourceTree = "<group>"; };
+		DCC5B13322499C05002E3D5F /* SmoothView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmoothView.swift; path = ../../SmoothView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				DC3F4659223F1B2300877556 /* AppDelegate.swift */,
 				DC3F465B223F1B2300877556 /* ViewController.swift */,
+				DCC5B13322499C05002E3D5F /* SmoothView.swift */,
 				DC3F465D223F1B2300877556 /* Main.storyboard */,
 				DC3F466D223F1B5F00877556 /* UIView+SmoothCorners.h */,
 				DC3F466C223F1B5F00877556 /* UIView+SmoothCorners.m */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC5B13422499C05002E3D5F /* SmoothView.swift in Sources */,
 				DC3F466E223F1B5F00877556 /* UIView+SmoothCorners.m in Sources */,
 				DC3F465C223F1B2300877556 /* ViewController.swift in Sources */,
 				DC3F465A223F1B2300877556 /* AppDelegate.swift in Sources */,

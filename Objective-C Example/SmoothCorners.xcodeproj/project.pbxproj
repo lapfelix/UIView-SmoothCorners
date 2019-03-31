@@ -14,6 +14,7 @@
 		DC118284223D73D100C46A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC118282223D73D100C46A31 /* LaunchScreen.storyboard */; };
 		DC118287223D73D100C46A31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC118286223D73D100C46A31 /* main.m */; };
 		DC3F464C223F191400877556 /* UIView+SmoothCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3F464B223F191300877556 /* UIView+SmoothCorners.m */; };
+		DC8F025C225058520040A8EF /* FLXSmoothView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8F025A225058520040A8EF /* FLXSmoothView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		DC118286223D73D100C46A31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC3F464A223F191300877556 /* UIView+SmoothCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+SmoothCorners.h"; path = "../../UIView+SmoothCorners.h"; sourceTree = "<group>"; };
 		DC3F464B223F191300877556 /* UIView+SmoothCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SmoothCorners.m"; path = "../../UIView+SmoothCorners.m"; sourceTree = "<group>"; };
+		DC8F025A225058520040A8EF /* FLXSmoothView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLXSmoothView.m; path = ../../FLXSmoothView.m; sourceTree = "<group>"; };
+		DC8F025B225058520040A8EF /* FLXSmoothView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLXSmoothView.h; path = ../../FLXSmoothView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				DC11827B223D73CE00C46A31 /* ViewController.m */,
 				DC3F464A223F191300877556 /* UIView+SmoothCorners.h */,
 				DC3F464B223F191300877556 /* UIView+SmoothCorners.m */,
+				DC8F025B225058520040A8EF /* FLXSmoothView.h */,
+				DC8F025A225058520040A8EF /* FLXSmoothView.m */,
 				DC11827D223D73CE00C46A31 /* Main.storyboard */,
 				DC118280223D73D100C46A31 /* Assets.xcassets */,
 				DC118282223D73D100C46A31 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 				DC118287223D73D100C46A31 /* main.m in Sources */,
 				DC118279223D73CE00C46A31 /* AppDelegate.m in Sources */,
 				DC3F464C223F191400877556 /* UIView+SmoothCorners.m in Sources */,
+				DC8F025C225058520040A8EF /* FLXSmoothView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
