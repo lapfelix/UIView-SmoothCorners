@@ -14,6 +14,10 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        if (@available(iOS 13.0, *)) {
+            return;
+        }
+
         SEL defaultSelector = @selector(layoutSubviews);
         SEL swizzledSelector = @selector(flx_layoutSubviews);
 
@@ -60,9 +64,19 @@
 
 #pragma mark - Setters
 
-- (void)setFlx_continuousCorners:(BOOL)flx_continuousCorners {
-    BOOL changed = (self.flx_continuousCorners != flx_continuousCorners);
-    objc_setAssociatedObject(self, @selector(flx_continuousCorners), @(flx_continuousCorners), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setFlx_continuousCorners:(BOOL)continuousCorners {
+    if (@available(iOS 13.0, *)) {
+        if (continuousCorners) {
+            self.layer.cornerCurve = kCACornerCurveContinuous;
+        }
+        else {
+            self.layer.cornerCurve = kCACornerCurveCircular;
+        }
+        return;
+    }
+    
+    BOOL changed = (self.flx_continuousCorners != continuousCorners);
+    objc_setAssociatedObject(self, @selector(flx_continuousCorners), @(continuousCorners), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     if (changed) {
         [self flx_updateMask];
@@ -72,6 +86,10 @@
 #pragma mark - Getters
 
 - (BOOL)flx_continuousCorners {
+    if (@available(iOS 13.0, *)) {
+        return self.layer.cornerCurve == kCACornerCurveContinuous;
+    }
+
     NSNumber *enableContinuousCorners = objc_getAssociatedObject(self, @selector(flx_continuousCorners));
     return enableContinuousCorners.boolValue;
 }
