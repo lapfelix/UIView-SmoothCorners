@@ -8,7 +8,7 @@ An easy way to enable [smooth corners](https://hackernoon.com/apples-icons-have-
 ### Swift
 #### As a UIView subclass: 
 Add `SmoothView.swift` to your project
-```
+```swift
 let myView = SmoothView()
 myView.flx_smoothCorners = true
 myView.layer.cornerRadius = 50
@@ -18,7 +18,7 @@ myView.layer.cornerRadius = 50
 #### As a UIView category (that swizzles layoutSubviews):
 Add `UIView+SmoothCorners.h` and `UIView+SmoothCorners.m` to your project
 Add `#import "UIView+SmoothCorners.h"` to your bridging header
-```
+```swift
 myView.layer.cornerRadius = 50
 myView.flx_continuousCorners = true
 ```
@@ -26,7 +26,7 @@ myView.flx_continuousCorners = true
 ### Objective-C
 #### As a UIView subclass: 
 Add `FLXSmoothView.h` and `FLXSmoothView.m` to your project
-```
+```objc
 FLXSmoothView *myView = FLXSmoothView()
 myView.flx_smoothCorners = YES;
 myView.layer.cornerRadius = 50;
@@ -35,7 +35,7 @@ myView.layer.cornerRadius = 50;
 
 #### As a UIView category (that swizzles layoutSubviews):
 Add `UIView+SmoothCorners.h` and `UIView+SmoothCorners.m` to your project
-```
+```objc
 myView.layer.cornerRadius = 50;
 myView.flx_continuousCorners = YES;
 ```
