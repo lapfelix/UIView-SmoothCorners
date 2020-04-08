@@ -27,7 +27,7 @@ myView.flx_continuousCorners = true
 #### As a UIView subclass: 
 Add `FLXSmoothView.h` and `FLXSmoothView.m` to your project
 ```objc
-FLXSmoothView *myView = FLXSmoothView()
+FLXSmoothView *myView = [FLXSmoothView new];
 myView.flx_smoothCorners = YES;
 myView.layer.cornerRadius = 50;
 ```
